@@ -2,7 +2,6 @@
 
 ## 项目结构
 ```
-F:\BlogDemo
 ├── back-end -- 后端
 |  └── blog -- 后端客户系统
 |     ├── src
