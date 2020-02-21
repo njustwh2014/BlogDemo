@@ -67,8 +67,8 @@ HikariCP | 数据库连接池 | [GitHub](https://github.com/brettwooldridge/Hika
 Docker | 容器化引擎 | [官网](https://www.docker.com/)
 Docker Compose | 容器编排工具 | [官网](https://docs.docker.com/compose/)
 Mysql | 关系型数据库 | [官网](https://www.mysql.com/cn/)
-Redis | 非关系型数据库 | [GitHub](https://redis.io/)
-Nginx | 高性能的HTTP和反向代理web服务器 | [GitHub](https://www.nginx.com/)
+Redis | 非关系型数据库 | [官网](https://redis.io/)
+Nginx | 高性能的HTTP和反向代理web服务器 | [官网](https://www.nginx.com/)
 
 ## 前端技术
 
