@@ -7,12 +7,7 @@ F:\BlogDemo
 |  └── blog -- 后端客户系统
 |     ├── src
 |     |  ├── main
-|     |  |  ├── java
-|     |  |  |  └── cn
-|     |  |  |     └── edu
-|     |  |  |        └── seu
-|     |  |  |           └── wh
-|     |  |  |              └── blog
+|     |  |  ├── java-cn-edu-seu-wh-blog
 |     |  |  |                 ├── aspect -- 日志切面
 |     |  |  |                 ├── async -- 异步消息队列
 |     |  |  |                 ├── configuration -- 配置类
