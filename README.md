@@ -1,5 +1,7 @@
 ## 简介
 
+
+
 ## 项目结构
 ```
 ├── back-end -- 后端
@@ -51,6 +53,35 @@
 
 ## 技术栈
 
+### 后端技术
+
+技术 | 说明 | 地址
+----|----|----
+Spring Boot | 新一代 JavaEE 开发标准 | [GitHub](https://github.com/spring-projects/spring-boot)
+TkMyBatis | 基于 MyBatis 二次开发的轻量级框架，用于简化 MyBatis 操作 | [GitHub](https://github.com/abel533/Mapper)
+MyBatisGenerator | Maven 插件，用于 MyBatis 相关代码生成 | [官网](http://www.mybatis.org/generator/)
+MybatisCodeHelper | Intellij IDEA 插件，用于 MyBatis 相关代码生成 | [官网](https://plugins.jetbrains.com/plugin/9837-mybatiscodehelperpro)
+PageHelper | MyBatis 分页插件 | [GitHub](https://github.com/pagehelper/Mybatis-PageHelper)
+Swagger | API 文档生成工具 | [GitHub](https://github.com/swagger-api/swagger-ui)
+HikariCP | 数据库连接池 | [GitHub](https://github.com/brettwooldridge/HikariCP)
+Docker | 容器化引擎 | [官网](https://www.docker.com/)
+Docker Compose | 容器编排工具 | [官网](https://docs.docker.com/compose/)
+Mysql | 关系型数据库 | [官网](https://www.mysql.com/cn/)
+Redis | 非关系型数据库 | [GitHub](https://redis.io/)
+Nginx | 高性能的HTTP和反向代理web服务器 | [GitHub](https://www.nginx.com/)
+
+## 前端技术
+
+技术 | 说明 | 地址
+----|----|----
+Vue | 前端框架，MVVM 模式的实现者 | [GitHub](https://github.com/vuejs/vue)
+Vue CLI | Vue 脚手架，基于 NodeJS | [GitHub](https://github.com/vuejs/vue-cli)
+Vue Router | Vue 路由框架 | [GitHub](https://github.com/vuejs/vue-router)
+Vuex | Vue 全局状态管理框架 | [GitHub](https://github.com/vuejs/vuex)
+Axios | 前端 HTTP 框架 | [GitHub](https://github.com/axios/axios)
+Element UI | 饿了么 UI 框架 | [官网](https://element.eleme.cn)
+Vue Element Admin | 基于 Element UI 的前端后台解决方案 | [GitHub](https://github.com/PanJiaChen/vue-element-admin)
+Vue Image Crop Upload | Vue 图片剪裁上传组件 | [GitHub](https://github.com/dai-siki/vue-image-crop-upload)
 
 ## 配置项以及如何启动
 
