@@ -1,6 +1,5 @@
 ## 简介
-
-
+基于Springboot框架实现了一个可以交互的blog网站，前端界面利用Vuejs和ElementUI。应用Redis缓存和用Redis实现一个异步消息队列，项目主要用于学习springboot、redis、mysql实践。
 
 ## 项目结构
 ```
@@ -48,7 +47,7 @@
 |     |  └── util
 |     ├── static
 |     └── test        
-└── resources
+└── resources -- 资源文件
 ```
 
 ## 技术栈
@@ -70,7 +69,7 @@ Mysql | 关系型数据库 | [官网](https://www.mysql.com/cn/)
 Redis | 非关系型数据库 | [官网](https://redis.io/)
 Nginx | 高性能的HTTP和反向代理web服务器 | [官网](https://www.nginx.com/)
 
-## 前端技术
+### 前端技术
 
 技术 | 说明 | 地址
 ----|----|----
@@ -85,8 +84,74 @@ Vue Image Crop Upload | Vue 图片剪裁上传组件 | [GitHub](https://github.c
 
 ## 配置项以及如何启动
 
+### Redis安装
+可以采用docker-compose进行容器启动，本文为了方便各位尝试，采用docker直接启动。对于采用docker-compose启动容器的需要注意执行bash command后需要保持容器pid=1活性，可以在最后执行一条redis指令，保持容器运行。
+
+```bash
+# 运行服务
+docker run -it --name redis -v /root/wanghuan/docker/redis/cfg/redis.conf:/usr/local/etc/redis/redis.conf -v /root/wanghuan/docker/redis/data:/data -d -p 6379:6379 redis:latest /bin/bash
+
+# 进入容器
+docker exec -it redis bash
+# 加载配置
+redis-server /usr/local/etc/redis/redis.conf
+# 测试连接
+redis-cli -a wanghuan
+```
+> 上述redis.conf文件在resource目录下。
+
+> tips: redis desktop manager for free: https://github.com/qishibo/AnotherRedisDesktopManager/
+
+### Mysql安装
+
+```bash
+# pull image
+docker pull mysql:latest
+# run
+docker run --name mysql-mstc -v /root/wanghuan/docker/mysql/data:/data -e MYSQL_ROOT_PASSWORD=123456 -d -i -p 3306:3306 --restart=always  mysql:latest
+
+# 导出sql文件
+mysqldump -u root -p seumstc > F:/seumstc.sql
+# docker容器内导入sql文件
+# 进入docker容器
+docker exec -it mysql-mstc bash
+# 连接mysql
+mysql -u root -p
+# 新建数据库
+create database seumstc;
+use seumstc;
+# 导入sql文件
+source /data/seumstc.sql;
+```
+
+> 上述seumstc.sql文件在resource目录下
+
+> 解决mysql Client does not support authentication protocol requested by server; consider upgrading MySQL错误
+
+```sql
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+SELECT plugin FROM mysql.user WHERE User = 'root';
+```
+
+### 前端启动
+
+```bash
+cd front-end/blogapp
+npm i
+npm run dev
+```
 
 ## 技术难点总结
 
+### springboot拦截器配置
+
+### 日志切面配置
+
+### 应用redis作缓存
+
+### 利用redis实现异步消息队列
 
 ## 展望
+
+基于Springcloud-alibaba微服务化，实现一个方法即一个服务。
