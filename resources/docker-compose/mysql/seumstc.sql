@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS seumstc;
+USE seumstc;
 -- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
 -- Host: localhost    Database: seumstc
